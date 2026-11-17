@@ -1,0 +1,19 @@
+PROJECT: Form Photo Fixer
+
+PURPOSE
+A browser-based utility for preparing document photos by rotating, cropping, and adjusting image appearance.
+
+DELIVERED IN THIS STARTER
+- Working single-page browser application
+- JPG, PNG, and WebP upload
+- 90-degree rotation and horizontal flip
+- Manual crop selection
+- Brightness, contrast, and grayscale adjustments
+- PNG download
+- README with setup and scope information
+
+RUN
+Open index.html in a modern browser. No installation is required.
+
+SCOPE NOTE
+Automatic perspective correction / document corner detection is not implemented in this starter package. It is listed as a potential future enhancement, not as a current feature.

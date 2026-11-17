@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101318" />
+  <meta name="description" content="A simple browser-based tool to crop, rotate, and enhance document photos." />
+  <title>Form Photo Fixer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Form Photo Fixer home">
+        <span class="brand-mark">F</span>
+        <span>form<span class="brand-light">fix</span></span>
+      </a>
+      <div class="topbar-note"><span class="status-dot"></span> Runs in your browser</div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="eyebrow">DOCUMENT PHOTO TOOLKIT</div>
+        <h1>Make every document photo <span>look its best.</span></h1>
+        <p>Crop, straighten, and enhance a document photo before saving it. Your image stays on your device.</p>
+      </section>
+
+      <section class="workspace" aria-label="Photo editor">
+        <aside class="sidebar">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">YOUR WORKSPACE</div>
+              <h2>Photo editor</h2>
+            </div>
+            <span class="step-tag">01 / EDIT</span>
+          </div>
+
+          <label class="upload-card" for="fileInput" id="uploadCard">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <strong>Choose a photo</strong>
+            <span>JPG, PNG or WebP · up to 20 MB</span>
+            <span class="browse-link">Browse files</span>
+          </label>
+          <input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp" hidden />
+          <div class="file-details" id="fileDetails" hidden>
+            <span class="file-symbol">▧</span>
+            <span class="file-name" id="fileName">photo.png</span>
+            <button class="text-button" id="changeFileBtn" type="button">Change</button>
+          </div>
+
+          <div class="control-section">
+            <div class="section-title">TRANSFORM</div>
+            <div class="button-grid">
+              <button class="tool-button" id="rotateLeftBtn" type="button" disabled><span>↶</span> Rotate left</button>
+              <button class="tool-button" id="rotateRightBtn" type="button" disabled><span>↷</span> Rotate right</button>
+              <button class="tool-button" id="flipHBtn" type="button" disabled><span>⇄</span> Flip horizontal</button>
+              <button class="tool-button" id="cropBtn" type="button" disabled><span>⌗</span> Crop photo</button>
+            </div>
+            <div class="crop-actions" id="cropActions" hidden>
+              <span>Drag on the photo to select a crop area.</span>
+              <div class="crop-buttons">
+                <button class="secondary-button" id="cancelCropBtn" type="button">Cancel</button>
+                <button class="primary-small" id="applyCropBtn" type="button" disabled>Apply crop</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-section">
+            <div class="section-title">ADJUSTMENTS</div>
+            <label class="range-control" for="brightness">
+              <span><span>Brightness</span><output id="brightnessValue">100%</output></span>
+              <input id="brightness" type="range" min="50" max="160" value="100" disabled />
+            </label>
+            <label class="range-control" for="contrast">
+              <span><span>Contrast</span><output id="contrastValue">100%</output></span>
+              <input id="contrast" type="range" min="50" max="160" value="100" disabled />
+            </label>
+            <label class="toggle-row" for="grayscale">
+              <span>Black &amp; white</span>
+              <input id="grayscale" type="checkbox" disabled />
+            </label>
+          </div>
+
+          <div class="sidebar-actions">
+            <button class="secondary-button full-width" id="resetBtn" type="button" disabled>Reset changes</button>
+            <button class="download-button full-width" id="downloadBtn" type="button" disabled><span>↓</span> Download image</button>
+          </div>
+          <p class="privacy-note"><span>▣</span> Your photo is processed locally. It is not uploaded to a server.</p>
+        </aside>
+
+        <section class="preview-panel">
+          <div class="preview-toolbar">
+            <div>
+              <div class="section-title">LIVE PREVIEW</div>
+              <div class="preview-title" id="previewTitle">Your photo will appear here</div>
+            </div>
+            <span class="preview-badge" id="previewBadge">WAITING FOR PHOTO</span>
+          </div>
+          <div class="canvas-stage" id="canvasStage">
+            <div class="empty-state" id="emptyState">
+              <div class="empty-illustration"><div class="paper"><span></span><span></span><span></span><i>＋</i></div></div>
+              <h3>Nothing here yet</h3>
+              <p>Choose a document photo to start editing.</p>
+              <button class="primary-button" id="emptyUploadBtn" type="button">Upload a photo</button>
+            </div>
+            <canvas id="editorCanvas" hidden></canvas>
+            <div id="selectionBox" class="selection-box" hidden></div>
+          </div>
+          <div class="preview-footer">
+            <span id="imageDimensions">No image loaded</span>
+            <span>PNG export · Local processing</span>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer"><span>FORM PHOTO FIXER</span><span>Simple tools. Clear documents.</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
