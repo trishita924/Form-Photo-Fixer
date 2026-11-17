@@ -1,40 +1,52 @@
 # Form Photo Fixer
 
-Form Photo Fixer is a lightweight, browser-based document photo editor. It helps users prepare a clearer, more presentable photo of a document before saving it.
+Form Photo Fixer is a browser-based document photo editing tool designed to help users improve and prepare document images for digital use. It allows users to upload, crop, rotate, flip, and adjust images through a simple and user-friendly interface.
 
-## Current features
+## Live Demo
 
-- Upload JPG, PNG, and WebP images (up to 20 MB)
-- Preview the selected image in the browser
-- Rotate the image left or right in 90-degree steps
-- Flip the image horizontally
-- Select and apply a crop area by dragging over the preview
-- Adjust brightness and contrast
-- Convert the preview to black and white
-- Reset adjustments
-- Download the edited image as a PNG
-- Process images locally in the browser without sending them to a server
+https://trishita924.github.io/Form-Photo-Fixer/
 
-## Run the project
+## Features
 
-1. Download and extract the project ZIP.
-2. Open the `document-photo-fixer` folder.
-3. Double-click `index.html` to open the app in a modern browser.
-4. Upload an image and use the editing tools.
+- **Image Upload:** Upload JPG, PNG, and WebP images up to 20 MB.
+- **Image Preview:** Preview the uploaded document photo directly in the browser.
+- **Rotate Image:** Rotate images left or right in 90-degree steps.
+- **Flip Image:** Flip images horizontally.
+- **Crop Image:** Select and apply a custom crop area manually.
+- **Brightness Adjustment:** Control the brightness of the image.
+- **Contrast Adjustment:** Improve image contrast using adjustable controls.
+- **Grayscale Mode:** Convert images to black and white.
+- **Reset Adjustments:** Restore the image adjustments to their original settings.
+- **Download Image:** Save the edited image in PNG format.
+- **Browser-Based Processing:** Edit images locally without uploading them to an external server.
 
-No package installation or build step is required for this starter version.
-
-## Technologies
+## Technologies Used
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 - Canvas API
+
+## How to Use
+
+1. Open the live application.
+2. Upload a JPG, PNG, or WebP image.
+3. Use the available tools to rotate, flip, crop, or adjust the image.
+4. Preview the changes.
+5. Download the edited image as a PNG file.
 
 ## Privacy
 
-Image editing is performed locally in the browser. The app does not upload selected images to a backend or external service.
+All image editing operations are performed locally within the browser. Uploaded images are not sent to an external server or backend.
 
-## Current scope and future improvements
+## Future Improvements
 
-This starter version supports manual rotation, cropping, flipping, and image adjustments. Automatic document-edge detection, four-corner perspective correction, OCR, PDF export, and batch processing are not included yet and can be considered as future enhancements.
+Potential enhancements include automatic document-edge detection, perspective correction, OCR, PDF export, and batch image processing.
+
+## GitHub Repository
+
+https://github.com/trishita924/Form-Photo-Fixer
+
+## Developer
+
+Trishita Bhowmick
